@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { arrow } from '../assets/icons';
+import { arrow, resumetrics, converso, questly } from '../assets/icons';
 
 const ProjectCaseStudies = () => {
   const [activeCase, setActiveCase] = useState(0);
@@ -10,7 +10,7 @@ const ProjectCaseStudies = () => {
       id: 0,
       title: 'Resumetricts',
       subtitle: 'AI Resume Analyzer with ATS Optimization',
-      image: '/src/assets/icons/resumetrics.ico',
+      image: resumetrics,
       challenge: 'Job seekers struggle with ATS (Applicant Tracking Systems) compatibility, often getting rejected before human review.',
       solution: 'Developed an AI-powered platform that analyzes resumes for ATS compatibility and provides actionable improvement suggestions.',
       techStack: ['React Router', 'TypeScript', 'TailwindCSS', 'AI Integration', 'PDF Processing'],
@@ -33,23 +33,23 @@ const ProjectCaseStudies = () => {
     {
       id: 1,
       title: 'Converso',
-      subtitle: 'AI Companion Builder with Voice Agents',
-      image: '/src/assets/icons/converso.svg',
-      challenge: 'Creating personalized AI assistants requires complex setup and technical knowledge, limiting accessibility.',
-      solution: 'Built a user-friendly platform that enables anyone to create, customize, and deploy AI voice assistants with natural conversation capabilities.',
+      subtitle: 'AI Voice Companion Builder',
+      image: converso,
+      challenge: 'Traditional chatbots feel robotic and lack personality, making conversations feel artificial and disconnected.',
+      solution: 'Created an AI-powered voice companion builder that lets users create personalized AI chat buddies that feel alive, adapt to tone, remember context, and engage in natural conversations.',
       techStack: ['Next.js', 'TypeScript', 'Clerk Auth', 'AI APIs', 'Voice Processing'],
       features: [
-        'Drag-and-drop AI assistant builder',
-        'Natural voice conversation capabilities',
-        'Customizable personality and responses',
-        'Real-time voice processing',
-        'Secure user authentication'
+        'Personalized AI chat buddy creation',
+        'Tone adaptation and context memory',
+        'Natural, flowing conversation capabilities',
+        'Sleek UI with smooth voice interaction',
+        'Evolving digital friend experience'
       ],
       results: [
+        'Created truly personalized AI companions',
+        'Enhanced user emotional connection',
         'Simplified AI assistant creation process',
-        'Enabled non-technical users to build AI companions',
-        'Scalable architecture for multiple users',
-        'High-quality voice interaction experience'
+        'Revolutionary approach to AI interaction'
       ],
       github: 'https://github.com/Lakhyajit-96/saas-app',
       live: 'https://converso-demo.vercel.app'
@@ -58,7 +58,7 @@ const ProjectCaseStudies = () => {
       id: 2,
       title: 'Questly',
       subtitle: 'AI Mock Interview Platform',
-      image: '/src/assets/icons/questly.svg',
+      image: questly,
       challenge: 'Job seekers lack access to realistic interview practice, leading to poor performance in actual interviews.',
       solution: 'Created an AI-powered platform that provides realistic mock interviews with intelligent feedback and performance analytics.',
       techStack: ['React', 'AI Integration', 'Analytics', 'Performance Tracking'],
