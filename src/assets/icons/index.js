@@ -26,6 +26,13 @@ import arrow from './arrow.svg'
 import contact from './contact.svg'
 import soundon from './soundon.png'
 import soundoff from './soundoff.png'
+// Your app icons
+import apple from './apple.svg'
+import converso from './converso.svg'
+import questly from './questly.svg'
+import resumetrics from './resumetrics.ico'
+import velvetPour from './velvet pour.svg'
+import zentry from './zentry.svg'
 
 export {
     css,
@@ -55,5 +62,12 @@ export {
     arrow,
     contact,
     soundon,
-    soundoff
+    soundoff,
+    // Your app icons
+    apple,
+    converso,
+    questly,
+    resumetrics,
+    velvetPour,
+    zentry
 }

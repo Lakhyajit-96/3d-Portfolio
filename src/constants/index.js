@@ -23,7 +23,14 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    // Your app icons
+    apple,
+    converso,
+    questly,
+    resumetrics,
+    velvetPour,
+    zentry
 } from "../assets/icons";
 
 export const skills = [
@@ -173,56 +180,56 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/lakhyajit-changmai',
+        link: 'https://github.com/Lakhyajit-96',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/lakhyajit-changmai',
+        link: 'https://www.linkedin.com/in/lakhyajit-changmai-3a3b56169/',
     }
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
+        iconUrl: resumetrics,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/lakhyajit-changmai',
+        name: 'Resumetricts',
+        description: 'An AI-powered resume analyzer with ATS optimization. Built with React Router, TypeScript, and TailwindCSS. Features intelligent resume parsing, ATS compatibility scoring, and personalized improvement suggestions.',
+        link: 'https://github.com/Lakhyajit-96/ai-resume-analyzer',
     },
     {
-        iconUrl: threads,
+        iconUrl: converso,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/lakhyajit-changmai',
+        name: 'Converso',
+        description: 'An AI-powered voice companion builder that lets users create personalized AI chat buddies. Unlike traditional chatbots, Converso feels alive — it adapts to your tone, remembers context, and engages in natural, flowing conversations. Features sleek UI, smooth voice interaction, and evolves into a truly unique digital friend.',
+        link: 'https://github.com/Lakhyajit-96/saas-app',
     },
     {
-        iconUrl: car,
+        iconUrl: questly,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/lakhyajit-changmai',
+        name: 'Questly',
+        description: 'An AI-powered mock interview platform designed to help job seekers practice and improve their interview skills. Features realistic AI interviewers, performance analytics, and personalized feedback.',
+        link: 'https://github.com/Lakhyajit-96/questly',
     },
     {
-        iconUrl: snapgram,
+        iconUrl: velvetPour,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/lakhyajit-changmai',
+        name: 'Velvet Pour',
+        description: 'A stunning GSAP-animated landing page for a premium cocktail brand. Features smooth animations, interactive elements, and modern design principles to create an immersive user experience.',
+        link: 'https://github.com/Lakhyajit-96/gsap_cocktails',
     },
     {
-        iconUrl: estate,
+        iconUrl: apple,
         theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/lakhyajit-changmai',
+        name: 'Apple',
+        description: 'An Apple-inspired iPhone 15 Pro landing page design. Recreated Apple\'s signature design language with smooth animations, premium typography, and responsive layouts that showcase product features elegantly.',
+        link: 'https://github.com/Lakhyajit-96/apple_website',
     },
     {
-        iconUrl: summiz,
+        iconUrl: zentry,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/lakhyajit-changmai',
+        name: 'Zentry',
+        description: 'An Awwwards-winning landing page design featuring cutting-edge web technologies and innovative user interactions. Showcases advanced CSS animations, creative layouts, and exceptional user experience design.',
+        link: 'https://github.com/Lakhyajit-96/awwwards',
     }
 ];

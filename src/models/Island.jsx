@@ -192,6 +192,7 @@ export function Island({
         ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
       // Set the current stage based on the island's orientation
+      // Optimized ranges for better popup coverage
       switch (true) {
         case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
           setCurrentStage(4);

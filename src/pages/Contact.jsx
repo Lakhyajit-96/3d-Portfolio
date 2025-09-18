@@ -4,7 +4,7 @@ import { Suspense, useRef, useState } from "react";
 
 import { Fox } from "../models";
 import useAlert from "../hooks/useAlert";
-import { Alert, Loader } from "../components";
+import { Alert, Loader, ParticleField } from "../components";
 
 const Contact = () => {
   const formRef = useRef();
@@ -33,7 +33,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Lakhyajit Changmai",
           from_email: form.email,
-          to_email: "lakhyajit@example.com",
+          to_email: "marketvault01@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -163,6 +163,7 @@ const Contact = () => {
               rotation={[12.629, -0.6, 0]}
               scale={[0.5, 0.5, 0.5]}
             />
+            <ParticleField count={200} />
           </Suspense>
         </Canvas>
       </div>

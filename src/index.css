@@ -9,8 +9,15 @@
   --green-rgb: 125 161 35;
 }
 
+/* Dark mode variables */
+.dark {
+  --blue-rgb: 0 0 0;
+  --green-rgb: 34 197 94;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
+  @apply bg-white dark:bg-black text-slate-900 dark:text-white transition-colors duration-300;
 }
 
 body:has(.card[data-color="blue"]:hover) {

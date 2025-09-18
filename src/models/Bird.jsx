@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useAnimations, useGLTF } from "@react-three/drei";
 
@@ -7,6 +7,8 @@ import birdScene from "../assets/3d/bird.glb";
 // 3D Model from: https://sketchfab.com/3d-models/phoenix-bird-844ba0cf144a413ea92c779f18912042
 export function Bird() {
   const birdRef = useRef();
+  const [isClicked, setIsClicked] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   // Load the 3D model and animations from the provided GLTF file
   const { scene, animations } = useGLTF(birdScene);
@@ -19,6 +21,18 @@ export function Bird() {
   useEffect(() => {
     actions["Take 001"].play();
   }, []);
+
+  const handleClick = () => {
+    setIsClicked(true);
+    // Trigger a special animation
+    if (actions["Take 001"]) {
+      actions["Take 001"].reset().play();
+    }
+    
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 3000);
+  };
 
   useFrame(({ clock, camera }) => {
     // Update the Y position to simulate bird-like motion using a sine wave
@@ -43,14 +57,36 @@ export function Bird() {
       birdRef.current.position.x -= 0.01;
       birdRef.current.position.z += 0.01;
     }
+
+    // Add extra movement when clicked
+    if (isClicked) {
+      birdRef.current.position.y += Math.sin(clock.elapsedTime * 5) * 0.1;
+    }
   });
 
   return (
-    // to create and display 3D objects
-    <mesh ref={birdRef} position={[-5, 2, 1]} scale={[0.003, 0.003, 0.003]}>
-      // use the primitive element when you want to directly embed a complex 3D
-      model or scene
+    <mesh 
+      ref={birdRef} 
+      position={[-5, 2, 1]} 
+      scale={hovered ? [0.0035, 0.0035, 0.0035] : [0.003, 0.003, 0.003]}
+      onClick={handleClick}
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)}
+    >
+      {/* to create and display 3D objects */}
       <primitive object={scene} />
+      
+      {/* Add a trail effect when hovered */}
+      {hovered && (
+        <mesh position={[0, -1, 0]}>
+          <sphereGeometry args={[0.5, 8, 8]} />
+          <meshBasicMaterial 
+            color="#ff6b6b" 
+            transparent 
+            opacity={0.3} 
+          />
+        </mesh>
+      )}
     </mesh>
   );
 }
